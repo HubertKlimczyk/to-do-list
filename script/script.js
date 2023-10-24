@@ -10,7 +10,6 @@
         },
     ];
 
-
     const addNewTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
@@ -23,7 +22,6 @@
         tasks.splice(taskIndex, 1);
         render();
     };
-
 
     const toggleTaskDone = (taskIndex) => {
         tasks[taskIndex].done = !tasks[taskIndex].done
@@ -39,7 +37,6 @@
             });
         });
 
-
         const toggleDoneButtons = document.querySelectorAll(".js-done");
 
         toggleDoneButtons.forEach((toggleDoneButton, index) => {
@@ -47,7 +44,6 @@
                 toggleTaskDone(index);
             });
         });
-
     };
 
     const render = () => {
@@ -66,12 +62,8 @@
 
         document.querySelector(".js-list").innerHTML = htmlString;
 
-
         bindEvents();
-
     };
-
-
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -82,7 +74,6 @@
             return;
         }
         addNewTask(newTaskContent);
-
     };
 
     const init = () => {

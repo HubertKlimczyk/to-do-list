@@ -36,7 +36,9 @@
                 removeTask(index);
             });
         });
+    };
 
+    const bindToggle = () => {
         const toggleDoneButtons = document.querySelectorAll(".js-done");
 
         toggleDoneButtons.forEach((toggleDoneButton, index) => {
@@ -63,6 +65,7 @@
         document.querySelector(".js-list").innerHTML = htmlString;
 
         bindEvents();
+        bindToggle();
     };
 
     const onFormSubmit = (event) => {

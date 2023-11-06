@@ -1,20 +1,10 @@
 {
-    const tasks = [
-        {
-            content: "Odrobić lekcje",
-            done: false,
-        },
-        {
-            content: "zjeść kolacje",
-            done: true,
-        },
-    ];
+    const tasks = [];
 
     const addNewTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
         });
-
         render();
     };
 
@@ -53,11 +43,10 @@
 
         for (const task of tasks) {
             htmlString += `
-                <li
-                    ${task.done ? " style=\"text-decoration: line-through\"" : ""}>
-                    <button class="js-done">zrobione?</button>
-                    <button class="js-remove">usuń</button>
-                    ${task.content}
+                <li class="list__task js-task">                   
+                    <button class="list__button list__button--done js-done">${task.done ? "✔" : ""}</button>
+                    <span class="list__content ${task.done ? "list__content--done" : ""}">${task.content}</span>
+                    <button class="list__button list__button--remove js-remove">🗑</button>                  
                 </li>
             `;
         }
@@ -70,20 +59,18 @@
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-
-        const newTaskContent = document.querySelector(".js-newTask").value.trim();
-
-        if (newTaskContent === "") {
-            return;
+        const newTaskElement = document.querySelector(".js-newTask");
+        const newTaskContent = newTaskElement.value.trim();
+        if (newTaskContent !== "") {
+            addNewTask(newTaskContent);
+            newTaskElement.value = "";
         }
-        addNewTask(newTaskContent);
+        newTaskElement.focus();
     };
 
     const init = () => {
         render();
-
         const form = document.querySelector(".js-form");
-
         form.addEventListener("submit", onFormSubmit);
     };
 

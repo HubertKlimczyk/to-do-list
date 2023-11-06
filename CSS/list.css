@@ -1,0 +1,58 @@
+.list {
+    background-color: hsl(240, 33%, 99%);
+}
+
+.list__header {
+    font-size: 20px;
+    font-weight: 800;
+    align-self: center;
+    cursor: pointer;
+    border-bottom: 3px solid hsl(0deg 0% 85.19%);
+    padding: 14px 20px;
+    margin: 10px 0px;
+}
+
+.list__container {
+    background-color: hsl(240, 33%, 99%);
+    min-height: 50px;
+}
+
+.list__ul {
+    list-style: none;
+    padding: 10px 20px;
+    margin: 10px 0px;
+}
+
+.list__task {
+    padding: 7px;
+    border-bottom: 2px solid hsl(0deg 0% 85.19%);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 35px 1fr 35px;
+}
+
+.list__button {
+    width: 25px;
+    height: 25px;
+    border: none;
+    color: hsl(240, 33%, 99%);
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.list__button--done {
+    background-color: green;
+}
+
+.list__button--remove {
+    background-color: red;
+}
+
+.list__content {
+grid-column-start: 2;
+grid-column-end: 3;
+}
+
+.list__content--done {
+    text-decoration: line-through;
+}

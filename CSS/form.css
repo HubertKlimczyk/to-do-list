@@ -11,7 +11,7 @@
     grid-column-start: 1;
     grid-column-end: 4;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 800;
     align-self: center;
     cursor: pointer;
     border-bottom: 3px solid hsl(0deg 0% 85.19%);
@@ -26,7 +26,7 @@
 }
 
 .form__button {
-    background-color: teal;
+    background-color: hsl(180, 85%, 18%);
     color: white;
     border: none;
     cursor: pointer;

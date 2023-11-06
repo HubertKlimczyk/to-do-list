@@ -1,15 +1,13 @@
 .form {
     background-color: hsl(240, 33%, 99%);
     display: grid;
-    grid-template-columns: 150px 5fr 2fr;
-    grid-template-rows: 4fr 5fr;
+    grid-template-columns: 1fr auto;
     align-items: center;
     justify-content: space-between;
 }
 
 .form__header {
-    grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column: 1 / -1;
     font-size: 20px;
     font-weight: 800;
     align-self: center;
@@ -20,7 +18,7 @@
 
 .form__input {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 2;
     padding: 8px;
     margin: 14px 20px;
 }
@@ -34,6 +32,18 @@
     padding: 8px;
     margin-right: 20px;
 }
+
 .form__button:hover {
     background-color: rgba(0, 128, 128, 0.87);
+}
+
+@media(max-width: 767px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+
+    .form__button {
+        margin-left: 20px;
+        margin-bottom: 14px;
+    }
 }

@@ -28,20 +28,22 @@
         <h1 class="header__name">Lista zadań</h1>
     </header>
     <main>
-        <form class="form js-form">
-            <label for="inputTasks" class="form__header"><span>Dodaj nowe zadanie</span></label>
-            <input class="form__input js-newTask" id="inputTasks" name="To do" type="text"
-                placeholder="Co jest do zrobienia?" autofocus autocomplete="off">
-            <button class="form__button">Dodaj zadanine</button>
-        </form>
-        <div class="list">
+        <section>
+            <form class="form js-form">
+                <label for="inputTasks" class="form__header"><span>Dodaj nowe zadanie</span></label>
+                <input class="form__input js-newTask" id="inputTasks" name="To do" type="text"
+                    placeholder="Co jest do zrobienia?" autofocus autocomplete="off">
+                <button class="form__button">Dodaj zadanine</button>
+            </form>
+        </section>
+        <section class="list">
             <h2 class="list__header">Lista zadań</h2>
             <div class="list__container">
                 <ul class="list__ul js-list">
                     <li class="list__task js-task"></li>
                 </ul>
             </div>
-        </div>
+        </section>
     </main>
 </body>
 

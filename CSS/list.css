@@ -6,8 +6,7 @@
     font-size: 20px;
     font-weight: 800;
     align-self: center;
-    cursor: pointer;
-    border-bottom: 3px solid hsl(0deg 0% 85.19%);
+    border-bottom: 2px solid hsl(0deg 0% 85.19%);
     padding: 14px 20px;
     margin: 10px 0px;
 }
@@ -36,8 +35,12 @@
     height: 25px;
     border: none;
     color: hsl(240, 33%, 99%);
-    cursor: pointer;
     margin: 0 5px;
+}
+
+.list__button:active {
+    box-shadow: inset 0px 0px 0px 1px hsl(0, 0%, 0%);
+    border-radius: 2px;
 }
 
 .list__button--done {

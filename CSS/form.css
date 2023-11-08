@@ -4,6 +4,8 @@
     grid-template-columns: 1fr auto;
     align-items: center;
     justify-content: space-around;
+    padding: 20px;
+    grid-gap: 20px;
 }
 
 .form__header {
@@ -12,14 +14,12 @@
     font-weight: 800;
     align-self: center;
     border-bottom: 2px solid hsl(0deg 0% 85.19%);
-    padding: 14px 20px;
 }
 
 .form__input {
     grid-column-start: 1;
     grid-column-end: 2;
     padding: 8px;
-    margin: 14px 20px;
 }
 
 .form__button {
@@ -28,21 +28,16 @@
     border: none;
     font-weight: 300;
     padding: 8px;
-    margin-right: 20px;
+    cursor: pointer;
 }
 
 .form__button:active {
-    box-shadow: inset 0px 0px 1px 1px hsl(0, 0%, 0%);
+    border: 2px solid black;
     border-radius: 2px;
 }
 
 @media(max-width: 767px) {
     .form {
         grid-template-columns: 1fr;
-    }
-
-    .form__button {
-        margin-left: 20px;
-        margin-bottom: 14px;
     }
 }

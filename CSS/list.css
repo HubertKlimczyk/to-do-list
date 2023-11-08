@@ -13,7 +13,7 @@
 
 .list__container {
     background-color: hsl(240, 33%, 99%);
-    min-height: 50px;
+    min-height: 30px;
 }
 
 .list__ul {
@@ -34,12 +34,13 @@
     width: 25px;
     height: 25px;
     border: none;
+    cursor: pointer;
     color: hsl(240, 33%, 99%);
-    margin: 0 5px;
+    margin: 0;
 }
 
 .list__button:active {
-    box-shadow: inset 0px 0px 0px 1px hsl(0, 0%, 0%);
+    border: 2px solid black;
     border-radius: 2px;
 }
 

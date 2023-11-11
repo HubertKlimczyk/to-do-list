@@ -29,14 +29,16 @@
     padding: 10px;
     cursor: pointer;
     font-weight: 300;
+    transition: 0.3s;
 }
 
 .form__button:hover {
-    background-color: hsla(180, 100%, 25%, 0.900);
+    background-color: hsla(180, 100%, 25%, 0.9);
+    transform: scale(1.02);
 }
 
 .form__button:active {
-    background-color: hsla(180, 100%, 25%, 0.700);
+    background-color: hsla(180, 100%, 25%, 0.6);
 }
 
 @media(max-width: 767px) {

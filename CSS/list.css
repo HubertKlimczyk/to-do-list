@@ -38,10 +38,11 @@
     cursor: pointer;
     color: hsl(240, 33%, 99%);
     margin: 0;
+    transition: 0.3s;
 }
 
 .list__button:active {
-    border: 2px solid black;
+    border: 1px solid hsla(0, 0%, 25%, 0.795);
     border-radius: 2px;
 }
 

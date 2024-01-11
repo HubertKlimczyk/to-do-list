@@ -62,9 +62,9 @@
         let htmlString = "";
         for (const task of tasks) {
             htmlString += `
-                <li class="list__task js-task">                   
-                    <button class="list__button list__button--done js-done">${task.done ? "✔" : ""}</button>
-                    <span class="list__content ${task.done ? "list__content--done" : ""}">${task.content}</span>
+                <li class="list__task js-task ${task.done && hideDoneTasks ? "list__task--hidden" : ""}">                                  
+                    <button class="list__button list__button--done js-done">${task.done ? "✔" : ""}</button>                   
+                    <span class="list__content ${task.done ? "list__content--done" : ""}">${task.content}</span>                   
                     <button class="list__button list__button--remove js-remove">🗑</button>                  
                 </li>
             `;
@@ -77,12 +77,12 @@
         const buttonsElement = document.querySelector(".js-newButtons");
         if (tasks.length > 0) {
             buttonsElement.innerHTML = `
-            <button class="task__hideOrShowAllDone js-toggleDoneTasks">
-            ${hideDoneTasks ? "Pokaż" : "Ukryj"} wykonane
+            <button class="list__otherButtons js-toggleDoneTasks">
+                ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
             </button>
-            <button class="task__markAllDone js-markAllDone"
-            ${tasks.every(({ done }) => done) ? "disabled" : ""}>
-            Oznacz wszystkie jako wykonane
+            <button class="list__otherButtons js-markAllDone"
+                ${tasks.every(({ done }) => done) ? "disabled" : ""}>
+                Ukończ wszystkie
             </button>`;
         } else {
             buttonsElement.innerHTML = ``;

@@ -6,8 +6,6 @@
     font-size: 20px;
     font-weight: 800;
     align-self: center;
-    border-bottom: 1px solid hsl(0deg 0% 85.19%);
-    padding: 10px 20px;
     margin: 10px 0px;
 }
 
@@ -29,6 +27,10 @@
     align-items: center;
     grid-template-columns: auto 1fr auto;
     grid-gap: 10px;
+}
+
+.list__task--hidden {
+    display: none;
 }
 
 .list__button {
@@ -64,4 +66,42 @@
 
 .list__content--done {
     text-decoration: line-through;
+}
+
+.list__otherButtons {
+    border: none;
+    background: transparent;
+    color: hsl(180, 100%, 25%);
+    padding: 0px 10px 0px 10px;
+}
+
+.list__otherButtons:hover {
+    cursor: pointer;
+    color: hsla(180, 100%, 25%, 0.808);
+    transition: 0.5s;
+}
+
+.list__newButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.list__sectionHeader {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 20px;
+    padding: 10px 20px;
+    border-bottom: 1px solid hsl(0deg 0% 85.19%);
+}
+
+@media(max-width: 767px) {
+    .list__sectionHeader {
+        grid-template-columns: 1fr;
+    }
+    .list__newButtons {
+        justify-content: center;
+    }
 }

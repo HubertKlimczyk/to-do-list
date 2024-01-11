@@ -77,8 +77,12 @@
 
 .list__otherButtons:hover {
     cursor: pointer;
-    color: hsla(180, 100%, 25%, 0.808);
-    transition: 0.5s;
+    color: hsla(180, 49%, 44%, 0.719);
+    transition: 0.3s;
+}
+
+.list__markAllDoneButton:disabled {
+    color: hsla(0, 0%, 50%, 0.438);
 }
 
 .list__newButtons {
@@ -101,6 +105,7 @@
     .list__sectionHeader {
         grid-template-columns: 1fr;
     }
+
     .list__newButtons {
         justify-content: center;
     }
